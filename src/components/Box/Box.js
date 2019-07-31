@@ -5,9 +5,8 @@ import './Box.scss'
 class Box extends Component {
 
   render() {
-    const className = this.props.className ? '' : ' '+this.props.className
     return (
-      <div className={"box"+className}>
+      <div className={`box ${this.props.className}`} style={this.props.styles}>
         {this.props.children}
       </div>
     );
@@ -20,13 +19,18 @@ Box.propTypes = {
      */
     className: PropTypes.string,
     /**
+     * @property {object} styles is a styles object that passes inline styles to the component
+     */
+    styles: PropTypes.object,
+    /**
      * @property {element} children are placed inside the Box div
      */
     children: PropTypes.element
 }
 
 Box.defaultProps = {
-    className: ""
+    className: "",
+    styles: {}
 }
 
 export default Box;
