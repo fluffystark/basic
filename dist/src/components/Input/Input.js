@@ -34,26 +34,22 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var propTypes = {
-  /**
-
-   * @property {string} className is used for input class
-
-   * @property {string} type is used for input type
-
-   * @property {string} placeholder is used for input placeholder
-
-   * @property {object} styles is used for inline styles
-
-   * @property {string} value is used for input value
-
-   * @property {func} onChange is used for overriding input function
-
-   */
+  /** @property {string} className is used for input class */
   className: _propTypes.default.string,
+
+  /** @property {string} type is used for input type */
   type: _propTypes.default.string,
+
+  /** @property {string} placeholder is used for input placeholder */
   placeholder: _propTypes.default.string,
+
+  /** @property {object} styles is used for inline styles */
   styles: _propTypes.default.object,
+
+  /** @property {string} value is used for input value */
   value: _propTypes.default.string.isRequired,
+
+  /** @property {func} onChange is used for overriding input function */
   onChange: _propTypes.default.func.isRequired
 };
 var defaultProps = {

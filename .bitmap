@@ -24,7 +24,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "fluffystark.basic/input@0.0.2": {
+    "fluffystark.basic/input@0.0.3": {
         "files": [
             {
                 "relativePath": "src/components/Input/Input.js",
