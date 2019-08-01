@@ -47,9 +47,9 @@ function (_Component) {
   _createClass(Box, [{
     key: "render",
     value: function render() {
-      var className = this.props.className ? '' : ' ' + this.props.className;
       return _react.default.createElement("div", {
-        className: "box" + className
+        className: "box ".concat(this.props.className),
+        style: this.props.styles
       }, this.props.children);
     }
   }]);
@@ -58,11 +58,30 @@ function (_Component) {
 }(_react.Component);
 
 Box.propTypes = {
+  /**
+
+   * @property {string} className is to add className to the Box
+
+   */
   className: _propTypes.default.string,
+
+  /**
+
+   * @property {object} styles is a styles object that passes inline styles to the component
+
+   */
+  styles: _propTypes.default.object,
+
+  /**
+
+   * @property {element} children are placed inside the Box div
+
+   */
   children: _propTypes.default.element
 };
 Box.defaultProps = {
-  className: ""
+  className: "",
+  styles: {}
 };
 var _default = Box;
 exports.default = _default;
